@@ -32,7 +32,7 @@ This repository is intended to be deployed as a static GitHub Pages site at `lyr
 
 1. Push the repository to GitHub.
 2. In the repository settings, open `Pages`.
-3. Set the site source to the default branch and the repository root.
+3. Set the site source to `GitHub Actions`.
 4. Keep the included [`CNAME`](./CNAME) file committed so GitHub Pages preserves the custom domain.
 5. Ensure `lyrics-sync.arda.tr` DNS is configured for GitHub Pages.
 
@@ -41,11 +41,15 @@ This repository is intended to be deployed as a static GitHub Pages site at `lyr
 - [`index.html`](./index.html): the application
 - [`CNAME`](./CNAME): custom domain binding for GitHub Pages
 - [`.nojekyll`](./.nojekyll): disables Jekyll processing for the static site
+- [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml): deploys the static site on pushes to `main`
 
 ## Project Structure
 
 ```text
 .
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml
 ├── .gitignore
 ├── .nojekyll
 ├── CNAME
